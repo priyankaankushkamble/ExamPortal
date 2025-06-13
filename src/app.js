@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 let session=require("express-session");
 let cookieparser=require("cookie-parser");
 let conn=require("./config/db.js");
-
+let router=require("./routes/router.js")
 let app=express();
 app.set("view engine","ejs");
 app.use(express.static("public"));

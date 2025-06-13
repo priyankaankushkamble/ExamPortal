@@ -1,9 +1,7 @@
 let app=require("./src/app.js");
 require("dotenv").config();
-app.get("/",(req,res)=>{
-    res.send("welcome to exam application syatem");
-    res.end();
-});
-app.listen(process.env.Port,()=>{
-    console.log("sever started");
+
+const PORT = process.env.PORT || 4000;
+app.listen(process.env.PORT,()=>{
+    console.log("sever started"+PORT);
 });
