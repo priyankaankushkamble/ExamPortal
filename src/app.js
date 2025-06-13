@@ -12,4 +12,5 @@ app.use("/", router);
 app.use("/register", router);
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
+rt
 module.exports = app;
