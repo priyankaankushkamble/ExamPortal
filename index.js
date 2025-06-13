@@ -1,6 +1,4 @@
-let app = require("./src/app.js");
-let PORT = 3000;
+let express = require("express");
+const bodyparser = require("body-parser")
 
-app.listen(PORT, (req, res) => {
-    console.log("Server Strted" + PORT);
-});
+let app = express();
