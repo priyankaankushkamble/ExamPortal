@@ -1,10 +1,15 @@
 let express = require("express");
-const bodyParser = require("body-parser");
-require("../src/config/db.js");
+const bodyparser = require("body-parser");
+let router = require("../src/routes/regroutes.js");
+
+let conn = require("./config/db.js");
 let app = express();
-app.use(bodyParser.urlencoded({
+app.use(bodyparser.urlencoded({
     extended: true
 }));
-app.use(bodyParser.json());
-app.set("view engine", 'ejs');
+app.use(bodyparser.json());
+app.use("/", router);
+app.use("/register", router);
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
 module.exports = app;
